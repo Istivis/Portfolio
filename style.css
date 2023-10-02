@@ -65,16 +65,25 @@ nav {
   justify-content: center;
 }
 .Nome {
-  display: flex;
+  display: block;
   justify-content: center;
   margin: 14px;
   font-size: 5rem;
+  text-align: center;
 }
-@media (max-width: 999px) {
+.nav-list.active {
+  transform: translateX(0);
+}
+@media (max-width: 860px) {
   body {
     overflow-x: hidden;
   }
+  .mobile-menu {
+    overflow: hidden;
+  }
   .nav-list {
+    display: none;
+    overflow: hidden;
     position: absolute;
     top: 8vh;
     right: 0;
@@ -87,16 +96,15 @@ nav {
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
   }
-  .nav-list li {
-    margin-left: 0;
-    opacity: 0;
-  }
-  .mobile-menu {
-    display: block;
-  }
 }
-.nav-list.active {
-  transform: translateX(0);
+@media (max-width: 573px) {
+  .container {
+    display: grid;
+    font-size: 2vw;
+    border-style: solid;
+    border-width: 1px;
+    justify-items: center;
+  }
 }
 
 @keyframes navLinkFade {
@@ -110,9 +118,9 @@ nav {
   }
 }
 body {
-  background: linear-gradient(84deg, #5c1b91, #000000);
-  background-size: 180% 180%;
-  animation: body 6s ease infinite;
+  background: linear-gradient(8deg, #5c1b91, #000000);
+  background-size: 100% 100%;
+  animation: body 5s ease infinite;
 }
 
 @keyframes body {
@@ -142,11 +150,11 @@ div.titulo {
 }
 
 div.op {
-  width: auto;
+  width: 33%;
   display: inline-block;
   font-size: 2vw;
   text-align: center;
-  min-width: 33%;
+  max-width: 100%;
   padding: 50px 0 50px 0;
   border-style: solid;
   border-width: 1px;
@@ -156,4 +164,5 @@ div.op {
   justify-content: space-between;
   align-items: center;
   margin: 80px;
+  width: auto;
 }
