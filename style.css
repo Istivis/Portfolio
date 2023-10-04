@@ -108,7 +108,7 @@ nav {
   }
 }
 body {
-  background: linear-gradient(-45deg, #66347a, #502e4d, #000000, #07da11);
+  background: linear-gradient(45deg, #66347a, #000000, #000000, #66347a);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
   height: 100vh;
@@ -154,6 +154,12 @@ div.op {
 @media only screen and (max-width: 767px) {
   div.op {
     width: 100%;
+  }
+  body {
+    background: linear-gradient(45deg, #66347a, #000000, #66347a);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    height: 100vh;
   }
 }
 
